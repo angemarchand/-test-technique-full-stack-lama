@@ -4,7 +4,7 @@ import Login from "../views/Login";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Home from "../views/Home";
-import Candidate from "../views/Candidate";
+import ProfileCandidate from "../views/Profile-candidate";
 
 
 export default function AppRouter () {
@@ -15,7 +15,7 @@ export default function AppRouter () {
                 <Switch>
                     <Route path="/" component={Home} exact={true} />
                     <Route path="/login" component={Login} exact={true} />
-                    <Route path="/candidate" component={Candidate} exact={true} />
+                    <Route path="/profileCandidate" component={ProfileCandidate} exact={true} />
                 </Switch>
                 <Footer />
             </Fragment>

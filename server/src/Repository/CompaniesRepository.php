@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\Candidates;
+use App\Entity\Companies;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method Candidates|null find($id, $lockMode = null, $lockVersion = null)
- * @method Candidates|null findOneBy(array $criteria, array $orderBy = null)
- * @method Candidates[]    findAll()
- * @method Candidates[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Companies|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Companies|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Companies[]    findAll()
+ * @method Companies[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class CandidatesRepository extends ServiceEntityRepository
+class CompaniesRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Candidates::class);
+        parent::__construct($registry, Companies::class);
     }
 
     // /**
-    //  * @return Candidates[] Returns an array of Candidates objects
+    //  * @return Companies[] Returns an array of Companies objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class CandidatesRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Candidates
+    public function findOneBySomeField($value): ?Companies
     {
         return $this->createQueryBuilder('c')
             ->andWhere('c.exampleField = :val')

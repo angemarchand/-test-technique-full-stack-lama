@@ -3,7 +3,7 @@ import React from "react";
 
 function Home () {
     return (
-        <div>Bienvenue à tou les lamas</div>
+        <div>Bienvenue à tous les lamas</div>
     )
 }
 

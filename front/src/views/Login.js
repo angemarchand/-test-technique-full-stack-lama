@@ -6,7 +6,7 @@ function Login () {
 
     return (
         <div className="container mb-5 vh 100">
-            <h1 className="mt-3">Bienvenue sur Lamatch</h1>
+            <h1 className="mt-3">Bienvenue sur LAMATCH</h1>
             <div className="mt-3 rounded-0 card p-4 mx-auto w-50">
                 <h2 className="mb-5">Connexion</h2>
                 <div className="mb-3 sm-6 ">

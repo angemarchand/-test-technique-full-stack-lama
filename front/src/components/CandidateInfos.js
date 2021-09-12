@@ -112,25 +112,25 @@ function CandidateInfos (){
     let region     = e.target[8].value;
     // let theSkills  = e.target[9].value;;
 
-        // Axios.post('https://localhost:8000/api/candidates', {
-        //     profilePhoto : urlPicture,
-        //     firstname  : firstname,
-        //     name       : lastname,
-        //     email      : email,
-        //     birthDate  : birthdate,
-        //     levelStudies : levelStudy,
-        //     inSearch     : status,
-        //     // skills     : theSkills,
-        //     linkedin   : linkedIn,
-        //     searchRegion : region
-        // }).then(response => {
-        //     console.log("haha")
-        //     console.log(response)
-        //     // setCandidateInfo(res)
-        // } )
-        // .catch(error => {
-        //     console.error('There was an error!', error);
-        // });
+        Axios.post('https://localhost:8000/api/candidates', {
+            profilePhoto : urlPicture,
+            firstname  : firstname,
+            name       : lastname,
+            email      : email,
+            birthDate  : birthdate,
+            levelStudies : levelStudy,
+            inSearch     : status,
+            // skills     : theSkills,
+            linkedin   : linkedIn,
+            searchRegion : region
+        }).then(response => {
+            console.log("haha")
+            console.log(response)
+            // setCandidateInfo(res)
+        } )
+        .catch(error => {
+            console.error('There was an error!', error);
+        });
     }
 
     
@@ -141,9 +141,6 @@ function CandidateInfos (){
                 <form onSubmit={e => {submit(e)}} className=" p-4 rounded-0 bg-none mx-auto ">
                     <div className="row">
                         <div className="col d-flex justify-content-center">
-                            <div className="card w-50 me-5">
-                                {/* <img className="image" src="https://burst.shopifycdn.com/photos/portrait-young-man-smiling.jpg?width=1000&format=pjpg&exif=0&iptc=0" alt="" /> */}
-                            </div>
                             <div>
                                 <div className="mb-1 mt-3">
                                     <label htmlFor="profileFile" className="form-label">Modifier la photo :</label>

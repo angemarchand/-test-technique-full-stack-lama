@@ -11,13 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity(repositoryClass=CandidateRepository::class)
  */
-#[ApiResource(
-    collectionOperations: [
-        "sendSkill" => [
-            path
-        ]
-    ]
-)]
+#[ApiResource]
 class Candidate
 {
     /**
@@ -45,17 +39,17 @@ class Candidate
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $profile_photo;
+    private $profilePhoto;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
      */
-    private $birth_date;
+    private $birthDate;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $level_studies;
+    private $levelStudies;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -65,7 +59,7 @@ class Candidate
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $search_region;
+    private $searchRegion;
 
     /**
      * @ORM\ManyToMany(targetEntity=Skills::class, mappedBy="candidateRel, nullable=true")
@@ -75,7 +69,7 @@ class Candidate
     /**
      * @ORM\Column(type="boolean")
      */
-    private $in_search;
+    private $inSearch;
 
     public function __construct()
     {
@@ -125,36 +119,36 @@ class Candidate
 
     public function getProfilePhoto(): ?string
     {
-        return $this->profile_photo;
+        return $this->profilePhoto;
     }
 
-    public function setProfilePhoto(string $profile_photo): self
+    public function setProfilePhoto(string $profilePhoto): self
     {
-        $this->profile_photo = $profile_photo;
+        $this->profilePhoto = $profilePhoto;
 
         return $this;
     }
 
     public function getBirthDate(): ?\DateTimeInterface
     {
-        return $this->birth_date;
+        return $this->birthDate;
     }
 
-    public function setBirthDate(\DateTimeInterface $birth_date): self
+    public function setBirthDate(\DateTimeInterface $birthDate): self
     {
-        $this->birth_date = $birth_date;
+        $this->birthDate = $birthDate;
 
         return $this;
     }
 
     public function getLevelStudies(): ?string
     {
-        return $this->level_studies;
+        return $this->levelStudies;
     }
 
-    public function setLevelStudies(string $level_studies): self
+    public function setLevelStudies(string $levelStudies): self
     {
-        $this->level_studies = $level_studies;
+        $this->levelStudies = $levelStudies;
 
         return $this;
     }
@@ -173,12 +167,12 @@ class Candidate
 
     public function getSearchRegion(): ?string
     {
-        return $this->search_region;
+        return $this->searchRegion;
     }
 
-    public function setSearchRegion(string $search_region): self
+    public function setSearchRegion(string $searchRegion): self
     {
-        $this->search_region = $search_region;
+        $this->searchRegion = $searchRegion;
 
         return $this;
     }
@@ -212,12 +206,12 @@ class Candidate
 
     public function getInSearch(): ?bool
     {
-        return $this->in_search;
+        return $this->inSearch;
     }
 
-    public function setInSearch(bool $in_search): self
+    public function setInSearch(bool $inSearch): self
     {
-        $this->in_search = $in_search;
+        $this->inSearch = $inSearch;
 
         return $this;
     }
